@@ -1,0 +1,21 @@
+.gallery-image {
+	cursor: pointer;
+	transition: all 1s linear;
+	z-index: 5;
+}
+
+.fullScreenImage {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 5px;
+	z-index: 9;
+}
+
+.fullScreenImage img {
+	height: 100%;
+	margin: auto;
+	z-index: 999;
+}

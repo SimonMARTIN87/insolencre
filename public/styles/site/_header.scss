@@ -1,0 +1,46 @@
+.banner-wrapper {
+    min-width: 25%;
+    max-width: 50%;
+    margin-left: 50%;
+    z-index: 5;
+    -moz-transform: scaleY(0);
+	-webkit-transform: scaleY(0);
+	-o-transform: scaleY(0);
+	-ms-transform: scaleY(0);
+	transform: scaleY(0);
+
+	-webkit-transition: all 0.7s ease-in-out;
+	-moz-transition: all 0.7s ease-in-out;
+	-ms-transition: all 0.7s ease-in-out;
+	-o-transition: all 0.7s ease-in-out;
+	transition: all 0.7s ease-in-out;
+}
+
+.banner-wrapper .banner{
+	width: 100%;
+	-moz-transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+.banner-wrapper .banner-reflection {
+	width: 100%;
+
+	transform-origin: bottom left;
+	-webkit-transform-origin: bottom left;
+	-moz-transform-origin: bottom left;
+	-ms-transform-origin: bottom left;
+	-o-transform-origin: bottom left;
+
+	-moz-transform: scaleY(-0.3) translateX(-50%) translateY(335%)  skewX(-3deg);
+	-webkit-transform: scaleY(-0.3) translateX(-50%) translateY(335%)  skewX(-3deg);
+	-o-transform: scaleY(-0.3) translateX(-50%) translateY(335%)  skewX(-3deg);
+	-ms-transform: scaleY(-0.3) translateX(-50%) translateY(335%)  skewX(-3deg);
+	transform: scaleY(-0.3) translateX(-50%) translateY(335%)  skewX(-3deg);
+
+	mask-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7));
+	-webkit-mask-image: -webkit-linear-gradient(to bottom, transparent, rgba(0,0,0,0.7));
+	-webkit-mask-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7));
+}

@@ -1,0 +1,170 @@
+.menu-item, .menu-open-button {
+  z-index: 6;
+  background: #bebebe;
+  border-radius: 100%;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 20px;
+  color: white;
+  text-align: center;
+  line-height: 80px;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+
+  -webkit-transition: all ease-out 800ms;
+  transition: all ease-out 800ms;
+}
+
+.menu-open {
+  display: none;
+}
+
+.hamburger {
+  width: 25px;
+  height: 3px;
+  background: white;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -12.5px;
+  margin-top: -1.5px;
+  -webkit-transition: -webkit-transform 200ms;
+  transition: -webkit-transform 200ms;
+  transition: transform 200ms;
+  transition: transform 200ms, -webkit-transform 200ms;
+}
+
+.hamburger-1 {
+  -webkit-transform: translate3d(0, -8px, 0);
+          transform: translate3d(0, -8px, 0);
+}
+
+.hamburger-2 {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.hamburger-3 {
+  -webkit-transform: translate3d(0, 8px, 0);
+          transform: translate3d(0, 8px, 0);
+}
+
+.menu-open:checked + .menu-open-button .hamburger-1 {
+  -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
+          transform: translate3d(0, 0, 0) rotate(45deg);
+}
+.menu-open:checked + .menu-open-button .hamburger-2 {
+  -webkit-transform: translate3d(0, 0, 0) scale(0.1, 1);
+          transform: translate3d(0, 0, 0) scale(0.1, 1);
+}
+.menu-open:checked + .menu-open-button .hamburger-3 {
+  -webkit-transform: translate3d(0, 0, 0) rotate(-45deg);
+          transform: translate3d(0, 0, 0) rotate(-45deg);
+}
+
+.menu {
+  position: absolute;
+  top: 25%;
+  left: calc(50% - 50px);
+  margin-left: 10px;
+  width: 100px;
+  height: 650px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 20px;
+  text-align: left;
+  transition: all ease-in-out 1s;
+  -webkit-transition: all ease-in-out 1s;
+}
+
+.menu.active {
+  top: 0!important;
+  left: 0!important;
+}
+
+.menu-item span {
+  white-space: nowrap;
+  margin-left: 100px;
+  display: none;
+}
+
+.menu-item:hover{
+  background: white;
+  color: #e91e63;
+  width: 100px;
+}
+
+
+.menu-open-button {
+  z-index: 9;
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+  -webkit-transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+          transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+  cursor: pointer;
+}
+
+.menu-open:checked + .menu-open-button {
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+  -webkit-transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+          transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+}
+.menu-open:checked + .menu-open-button:hover {
+  -webkit-transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+          transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+}
+
+.menu-open:checked ~ .menu-item {
+  -webkit-transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+          transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+}
+
+.menu-open:checked ~ .menu-item:nth-of-type(1) {
+	-webkit-transform: translate3d(0, 100px, 300em);
+			transform: translate3d(0, 100px, 300em);
+}
+.menu-open:checked ~ .menu-item:nth-of-type(2) {
+	-webkit-transform: translate3d(0, 200px, 300em);
+			transform: translate3d(0, 200px, 300em);
+}
+.menu-open:checked ~ .menu-item:nth-of-type(3) {
+	-webkit-transform: translate3d(0, 300px, 300em);
+			transform: translate3d(0, 300px, 300em);
+}
+
+@-webkit-keyframes float {
+  0%, 50%, 100% {
+    -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+  }
+  25% {
+    -webkit-transform: translate3d(-20px,-20px,0);
+            transform: translate3d(-20px,-20px,0);
+  }
+  75% {
+    -webkit-transform: translate3d(20px,20px,0);
+            transform: translate3d(20px,20px,0);
+  }
+}
+
+@keyframes float {
+  0%, 50%, 100% {
+    -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+  }
+  25% {
+    -webkit-transform: translate3d(-20px,-20px,0);
+            transform: translate3d(-20px,-20px,0);
+  }
+  75% {
+    -webkit-transform: translate3d(20px,20px,0);
+            transform: translate3d(20px,20px,0);
+  }
+}
